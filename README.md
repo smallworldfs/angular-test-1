@@ -1,27 +1,32 @@
-# AngularTest1
+# Angular code review practice
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+This project is used as a code review subject with candidates for Frontend Developer positions.
 
-## Development server
+## Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The project has been developed under the following requirements:
 
-## Code scaffolding
+- The project has to let the user create users by entering their names.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- User names have to be at least three characters long.
 
-## Build
+- For each user, external services have to be used to estimate their age (<https://agify.io/>), nationality (<https://nationalize.io/>), and gender (<https://genderize.io/>).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- When saved, the new user has to be added to the table, and the form must be cleaned up.
 
-## Running unit tests
+## Code review
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Take your time to review the code. Clone the repo and run it locally, run the tests, etc.
 
-## Running end-to-end tests
+Here are some questions left for your analysis:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- does the code implement all the requirements?
+- is the code clean and follows SOLID principles?
+- is the code well-tested?
+- does the code use the best approach to solve each requirement?
 
-## Further help
+Don't hesitate to make any proposal you think would improve the code.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Error management
+
+Error management has been deliberately left unimplemented so that the candidate can suggest the best approach.

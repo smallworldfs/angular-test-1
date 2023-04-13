@@ -1,0 +1,27 @@
+<div class="user-form-container">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="user-form">
+        <div class="user-form-fields">
+            <mat-form-field appearance="outline">
+                <mat-label>Name:</mat-label>
+                <input matInput placeholder="Enter a user name" formControlName="name">
+            </mat-form-field>
+            <button mat-flat-button color="primary" type="submit">Save User</button>
+            <div class="user-form-chips">
+                <mat-chip-listbox aria-label="Dog selection" *ngIf="user">
+                    <mat-chip>
+                        {{ user.age}} years.
+                    </mat-chip>
+                    <mat-chip color="primary">
+                        <mat-icon *ngIf="user" aria-label="user.gender"
+                            fontIcon="{{user.gender == 'male'? 'boy':'girl'}}"></mat-icon>
+                    </mat-chip>
+                    <mat-chip color="accent">
+                        <span *ngIf="user" class="fi fi-{{user.country | lowercase}}"></span> {{ user ? user.country :
+                        "?"}}
+                    </mat-chip>
+                </mat-chip-listbox>
+            </div>
+        </div>
+    </form>
+
+</div>
