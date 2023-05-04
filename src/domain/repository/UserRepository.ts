@@ -1,11 +1,11 @@
 import { Observable } from "rxjs";
-import { User } from "../entity/User";
+import { IUser } from "../entity/User";
 import { Injectable } from "@angular/core";
 
 @Injectable({
     providedIn: 'root'
 })
 export abstract class UserRepository {
-    abstract getAll(): Observable<User[]>
-    abstract add(user: User): Observable<User>
+    abstract getAll(): Observable<IUser[]>
+    abstract add(user: IUser): Observable<IUser>
 }
