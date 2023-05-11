@@ -1,6 +1,14 @@
 import { v4 as uuidv4 } from 'uuid';
 
-export class User {
+export interface IUser{
+    readonly id: string,
+    name: string,
+    age?: number,
+    gender?: string,
+    country?: string
+}
+
+export class User implements IUser {
     constructor(
         public readonly id: string,
         public name: string,
@@ -9,7 +17,7 @@ export class User {
         public country?: string
     ) { }
 
-    static createNew(name: string): User {
+    static createNew(name: string): IUser {
         return new User(uuidv4(), name)
     }
 }
