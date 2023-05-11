@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EMPTY, Observable, of } from 'rxjs';
 import { UserService } from 'src/app/services/user.service';
-import { User } from 'src/domain/entity/User';
+import { IUser } from 'src/domain/entity/User';
 
 @Component({
     selector: 'app-users',
@@ -10,7 +10,7 @@ import { User } from 'src/domain/entity/User';
 })
 export class UsersComponent implements OnInit {
     displayedColumns: string[] = ['id', 'name', 'gender', 'country', 'age']
-    users$: Observable<User[]> = EMPTY
+    users$: Observable<IUser[]> = EMPTY
 
     constructor(
         private readonly userService: UserService

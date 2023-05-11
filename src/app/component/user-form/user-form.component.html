@@ -12,11 +12,11 @@
                         {{ user.age}} years.
                     </mat-chip>
                     <mat-chip color="primary">
-                        <mat-icon *ngIf="user" aria-label="user.gender"
-                            fontIcon="{{user.gender == 'male'? 'boy':'girl'}}"></mat-icon>
+                        <mat-icon aria-label="user.gender"
+                            [fontIcon]="user.gender == 'male'? 'boy':'girl'"></mat-icon>
                     </mat-chip>
                     <mat-chip color="accent">
-                        <span *ngIf="user" class="fi fi-{{user.country | lowercase}}"></span> {{ user ? user.country :
+                        <span [class]="'fi fi-'+user.country | lowercase"></span> {{ user ? user.country :
                         "?"}}
                     </mat-chip>
                 </mat-chip-listbox>
